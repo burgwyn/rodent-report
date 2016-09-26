@@ -9,8 +9,11 @@
             html, body { height: 100%; margin: 0; padding: 0; }
             body { display: flex; flex-flow: column; }
             section { width: 100%; }
+            #header { padding: 0 1em; }
             #header h1 { margin-top: 0.5em; }
             #map { flex-grow: 1; }
+            #footer { padding: 0 1em; }
+            #footer a { float: right; }
         </style>
     </head>
     <body>
@@ -21,13 +24,18 @@
         </section>
         <section id="map">
         </section>
+        <section id="footer">
+            <footer>
+                <span>Nat Burgwyn &copy;</span><a href="https://github.com/burgwyn/rodent-report">GitHub</a>
+            </footer>
+        </section>
         <script>
             var map;
 
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: 38.8995318, lng: -77.1549975},
-                    zoom: 12
+                    zoom: 15
                 });
                
                 var kmlLayer = new google.maps.KmlLayer({
